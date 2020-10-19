@@ -10,7 +10,7 @@ import ReactNative, {
   Dimensions,
   TextInput,
   ViewPropTypes,
-  KeyboardAvoidingView,
+
 } from "react-native";
 
 import CreditCard from "./CardView";
@@ -24,7 +24,7 @@ const s = StyleSheet.create({
 
   },
   form: {
-    marginTop: 10,
+    marginTop: scale(10),
   },
   inputContainer: {
     // marginLeft: 10,
@@ -39,7 +39,7 @@ const s = StyleSheet.create({
 
 const CVC_INPUT_WIDTH = scale(145);
 const EXPIRY_INPUT_WIDTH = CVC_INPUT_WIDTH;
-const CARD_NUMBER_INPUT_WIDTH_OFFSET = 40;
+const CARD_NUMBER_INPUT_WIDTH_OFFSET = scale(40);
 const CARD_NUMBER_INPUT_WIDTH = scale(300);
 const NAME_INPUT_WIDTH = CARD_NUMBER_INPUT_WIDTH;
 const PREVIOUS_FIELD_OFFSET = scale(80);
@@ -168,23 +168,23 @@ export default class CreditCardInput extends Component {
           // keyboardShouldPersistTaps="always"
           scrollEnabled={allowScroll}
           style={s.form}>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: scale(15)}}>
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: scale(15)}}>
           { requiresName &&
             <CCInput {...this._inputProps("name")}
               containerStyle={[s.inputContainer, inputContainerStyle, { width: NAME_INPUT_WIDTH }]} /> }
           </View>
-          <View style={{flexDirection: 'row', marginTop:20}}>
-          <View style={{ marginRight: 8}}>
+          <View style={{flexDirection: 'row', marginTop:scale(15)}}>
+          <View style={{ marginRight: scale(6)}}>
             <CCInput {...this._inputProps("expiry")}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: EXPIRY_INPUT_WIDTH }]} />
           </View>
-          <View style={{ marginLeft: 8}}>
+          <View style={{ marginLeft: scale(6)}}>
           { requiresCVC &&
             <CCInput {...this._inputProps("cvc")}
               keyboardType="numeric"
