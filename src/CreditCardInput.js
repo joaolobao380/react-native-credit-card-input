@@ -21,10 +21,10 @@ const s = StyleSheet.create({
     alignItems: "flex-start",
   },
   form: {
-    marginTop: 20,
+    marginTop: 10,
   },
   inputContainer: {
-    marginLeft: 20,
+    marginLeft: 10,
   },
   inputLabel: {
     fontWeight: "bold",
@@ -39,7 +39,7 @@ const EXPIRY_INPUT_WIDTH = CVC_INPUT_WIDTH;
 const CARD_NUMBER_INPUT_WIDTH_OFFSET = 40;
 const CARD_NUMBER_INPUT_WIDTH = scale(200);
 const NAME_INPUT_WIDTH = CARD_NUMBER_INPUT_WIDTH;
-const PREVIOUS_FIELD_OFFSET = 40;
+const PREVIOUS_FIELD_OFFSET = scale(70);
 const POSTAL_CODE_INPUT_WIDTH = 120;
 
 /* eslint react/prop-types: 0 */ // https://github.com/yannickcr/eslint-plugin-react/issues/106
