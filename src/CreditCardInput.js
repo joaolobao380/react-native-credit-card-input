@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import {scale} from 'react-native-size-matters';
 import ReactNative, {
   NativeModules,
   View,
@@ -33,7 +34,7 @@ const s = StyleSheet.create({
   },
 });
 
-const CVC_INPUT_WIDTH = 70;
+const CVC_INPUT_WIDTH = scale(100);
 const EXPIRY_INPUT_WIDTH = CVC_INPUT_WIDTH;
 const CARD_NUMBER_INPUT_WIDTH_OFFSET = 40;
 const CARD_NUMBER_INPUT_WIDTH = Dimensions.get("window").width - EXPIRY_INPUT_WIDTH - CARD_NUMBER_INPUT_WIDTH_OFFSET;
