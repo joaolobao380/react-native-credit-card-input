@@ -18,7 +18,7 @@ import { InjectedProps } from "./connectToState";
 
 const s = StyleSheet.create({
   container: {
-    alignItems: "center",
+    alignItems: "flex-start",
   },
   form: {
     marginTop: 20,
